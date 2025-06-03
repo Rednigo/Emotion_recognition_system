@@ -1,0 +1,9 @@
+2025-05-31 19:12:31.959336: 🚀 Training started at 2025-05-31 19:12:31.958331
+2025-05-31 19:12:31.960261: 📁 SRGAN model: EDSR_X4_SRGAN-final.h5
+2025-05-31 19:12:31.960261: 📁 Dataset: ..\DATASET
+2025-05-31 19:12:31.961362: 📁 Output: trained_emotion_system
+2025-05-31 19:12:31.961362: 
+============================================================
+2025-05-31 19:12:31.961362: STEP 1: SRGAN PREPROCESSING
+2025-05-31 19:12:31.962373: ============================================================
+2025-05-31 19:12:31.965368: ❌ Failed to initialize SRGAN preprocessor: Model file appears to contain only weights, not full model

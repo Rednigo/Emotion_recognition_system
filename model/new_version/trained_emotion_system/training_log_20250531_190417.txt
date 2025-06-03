@@ -1,0 +1,11 @@
+2025-05-31 19:04:17.227017: 🚀 Training started at 2025-05-31 19:04:17.227017
+2025-05-31 19:04:17.228005: 📁 SRGAN model: EDSR_X4_SRGAN-final.h5
+2025-05-31 19:04:17.228005: 📁 Dataset: ..\DATASET
+2025-05-31 19:04:17.229007: 📁 Output: trained_emotion_system
+2025-05-31 19:04:17.229007: 
+============================================================
+2025-05-31 19:04:17.229007: STEP 1: SRGAN PREPROCESSING
+2025-05-31 19:04:17.229007: ============================================================
+2025-05-31 19:04:17.230017: 📁 Preprocessed data exists at ..\DATASET_preprocessed
+2025-05-31 19:04:51.036999: 🗑️  Removing existing data and reprocessing...
+2025-05-31 19:04:55.325692: ❌ Failed to initialize SRGAN preprocessor: No model config found in the file at EDSR_X4_SRGAN-final.h5.

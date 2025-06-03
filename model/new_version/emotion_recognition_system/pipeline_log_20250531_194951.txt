@@ -1,0 +1,23 @@
+2025-05-31 19:49:51.988791: 🚀 STARTING COMPLETE EMOTION RECOGNITION PIPELINE
+2025-05-31 19:49:51.989152: ================================================================================
+2025-05-31 19:49:51.989152: 📁 SRGAN weights: srgan_complete.h5
+2025-05-31 19:49:51.990215: 📁 Dataset: ../DATASET
+2025-05-31 19:49:51.990215: 📁 Output: emotion_recognition_system
+2025-05-31 19:49:51.990215: 🎯 Mode: TEST
+2025-05-31 19:49:51.991218: 
+============================================================
+2025-05-31 19:49:51.991218: STEP 1: PREPARING SRGAN MODEL
+2025-05-31 19:49:51.991218: ============================================================
+2025-05-31 19:49:51.992215: 🔧 Loading SRGAN weights: srgan_complete.h5
+2025-05-31 19:49:53.737962: ✅ SRGAN model created using: direct
+2025-05-31 19:49:54.938936: ✅ Model inference test passed (best range: 0-1 range)
+2025-05-31 19:49:55.104046: 💾 Complete model saved to: emotion_recognition_system\srgan_complete.h5
+2025-05-31 19:49:55.105027: 
+============================================================
+2025-05-31 19:49:55.105027: STEP 2: SRGAN PREPROCESSING
+2025-05-31 19:49:55.106025: ============================================================
+2025-05-31 19:49:55.106025: 🔄 Starting SRGAN preprocessing...
+2025-05-31 19:49:55.106025:    Input dataset: ../DATASET
+2025-05-31 19:49:55.107025:    Output: emotion_recognition_system\preprocessed_dataset
+2025-05-31 19:49:55.107025:    Mode: TEST
+2025-05-31 19:49:55.108026: ❌ Pipeline failed: No module named 'srgan_standard_preprocessing'

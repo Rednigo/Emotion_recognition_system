@@ -1,0 +1,17 @@
+{
+  "model_type": "SRGAN_Generator_YourWeights",
+  "input_size": [
+    48,
+    48,
+    3
+  ],
+  "output_size": [
+    192,
+    192,
+    3
+  ],
+  "scale_factor": 4,
+  "architecture": "Custom SRGAN matching your weights structure",
+  "weight_structure": "conv2d layers with residual blocks and upsampling",
+  "paper_compliance": "4x upscaling (48x48 -> 192x192)"
+}

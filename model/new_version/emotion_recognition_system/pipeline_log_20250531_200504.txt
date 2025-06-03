@@ -1,0 +1,106 @@
+2025-05-31 20:05:04.666453: 🚀 STARTING COMPLETE EMOTION RECOGNITION PIPELINE
+2025-05-31 20:05:04.666453: ================================================================================
+2025-05-31 20:05:04.667442: 📁 SRGAN weights: srgan_complete.h5
+2025-05-31 20:05:04.667442: 📁 Dataset: ../DATASET
+2025-05-31 20:05:04.668445: 📁 Output: emotion_recognition_system
+2025-05-31 20:05:04.668445: 🎯 Mode: FULL
+2025-05-31 20:05:04.668445: 
+============================================================
+2025-05-31 20:05:04.669443: STEP 1: PREPARING SRGAN MODEL
+2025-05-31 20:05:04.669443: ============================================================
+2025-05-31 20:05:04.669443: ✅ Found existing complete model: emotion_recognition_system\srgan_complete.h5
+2025-05-31 20:05:07.131145: ⚠️  Failed to load existing model: Exception encountered when calling Lambda.call().
+
+[1mWe could not automatically infer the shape of the Lambda's output. Please specify the `output_shape` argument for this Lambda layer.[0m
+
+Arguments received by Lambda.call():
+  • args=('<KerasTensor shape=(None, 48, 48, 256), dtype=float32, sparse=False, ragged=False, name=keras_tensor_220>',)
+  • kwargs={'mask': 'None'}
+2025-05-31 20:05:07.131145: 🔄 Creating new model...
+2025-05-31 20:05:07.143346: 🔧 Loading SRGAN weights: srgan_complete.h5
+2025-05-31 20:05:07.609461: ✅ SRGAN model created using: direct
+2025-05-31 20:05:08.782882: ✅ Model inference test passed (best range: 0-1 range)
+2025-05-31 20:05:09.102489: 💾 Complete model saved to: emotion_recognition_system\srgan_complete.h5
+2025-05-31 20:05:09.102489: 
+============================================================
+2025-05-31 20:05:09.102489: STEP 2: SRGAN PREPROCESSING
+2025-05-31 20:05:09.103491: ============================================================
+2025-05-31 20:05:09.103491: 📁 Preprocessed data exists: emotion_recognition_system\preprocessed_dataset
+2025-05-31 20:05:11.182694: 🗑️  Removed existing preprocessed data
+2025-05-31 20:05:11.183693: 🔄 Starting SRGAN preprocessing...
+2025-05-31 20:05:11.183693:    Input dataset: ../DATASET
+2025-05-31 20:05:11.183693:    Output: emotion_recognition_system\preprocessed_dataset
+2025-05-31 20:05:11.183693:    Mode: FULL
+2025-05-31 20:41:10.687702: ✅ Preprocessing completed in 2159.3 seconds
+2025-05-31 20:41:10.687702: 📊 Processed: 15339 images
+2025-05-31 20:41:10.688704: ❌ Failed: 0 images
+2025-05-31 20:41:10.689701: 
+============================================================
+2025-05-31 20:41:10.689701: STEP 3: EMOTION RECOGNITION TRAINING
+2025-05-31 20:41:10.690705: ============================================================
+2025-05-31 20:41:10.700703: ✅ Emotion recognition system initialized
+2025-05-31 20:41:10.702702: ✅ Implementation validated - matches paper specifications
+2025-05-31 20:41:10.702702: 📂 Loading preprocessed dataset: emotion_recognition_system\preprocessed_dataset
+2025-05-31 20:44:06.763685: ✅ Dataset loaded in 176.1 seconds
+2025-05-31 20:44:06.763685: 📊 Training samples: 2134
+2025-05-31 20:44:06.764674: 📊 Test samples: 532
+2025-05-31 20:44:06.764674: 📊 Features: 10 angular features
+2025-05-31 20:44:06.764674: 🎯 Training models with paper hyperparameters...
+2025-05-31 20:44:09.679632: ✅ Training completed in 2.9 seconds
+2025-05-31 20:44:09.679632: 
+============================================================
+2025-05-31 20:44:09.680628: STEP 4: RESULTS ANALYSIS
+2025-05-31 20:44:09.681631: ============================================================
+2025-05-31 20:44:09.681631: 
+🏆 MODEL PERFORMANCE RESULTS:
+2025-05-31 20:44:09.681631: ----------------------------------------
+2025-05-31 20:44:09.682629: 🥇 MLP     : 0.5282
+2025-05-31 20:44:09.682629: 🥈 QDA     : 0.5226
+2025-05-31 20:44:09.682629: 🥉 NB      : 0.5150
+2025-05-31 20:44:09.683629:    LR      : 0.5075
+2025-05-31 20:44:09.683629:    RF      : 0.4981
+2025-05-31 20:44:09.684630:    SVM     : 0.4605
+2025-05-31 20:44:09.684630:    KNN     : 0.3797
+2025-05-31 20:44:09.684630:    DT      : 0.3647
+2025-05-31 20:44:09.685628: 
+🎉 Best performing model: MLP
+2025-05-31 20:44:09.685628: 🎯 Best accuracy: 0.5282
+2025-05-31 20:44:09.685628: 
+📄 Paper comparison:
+2025-05-31 20:44:09.686628: ⚠️  FAIR: Results below paper expectations but reasonable
+2025-05-31 20:44:09.686628: 
+📊 Per-emotion performance (F1-scores):
+2025-05-31 20:44:09.686628:   surprise    : F1=0.602, P=0.546, R=0.670
+2025-05-31 20:44:09.687627:   fear        : F1=0.000, P=0.000, R=0.000
+2025-05-31 20:44:09.687627:   disgust     : F1=0.000, P=0.000, R=0.000
+2025-05-31 20:44:09.687627:   happiness   : F1=0.615, P=0.564, R=0.675
+2025-05-31 20:44:09.687627:   sadness     : F1=0.151, P=0.212, R=0.117
+2025-05-31 20:44:09.687627:   anger       : F1=0.526, P=0.536, R=0.517
+2025-05-31 20:44:09.688627:   neutral     : F1=0.571, P=0.539, R=0.608
+2025-05-31 20:44:09.688627: 
+============================================================
+2025-05-31 20:44:09.689629: STEP 5: SAVING TRAINED SYSTEM
+2025-05-31 20:44:09.689629: ============================================================
+2025-05-31 20:44:09.701830: ✅ Emotion model saved to: emotion_recognition_system\emotion_model
+2025-05-31 20:44:09.702831: 📊 Creating result visualizations...
+2025-05-31 20:44:11.191400: ✅ Visualization saved to: emotion_recognition_system\results_visualization.png
+2025-05-31 20:44:11.191400: 📄 Training report saved to: emotion_recognition_system\complete_training_report.json
+2025-05-31 20:44:11.191400: 
+================================================================================
+2025-05-31 20:44:11.191400: 🎉 PIPELINE COMPLETED SUCCESSFULLY!
+2025-05-31 20:44:11.191400: ================================================================================
+2025-05-31 20:44:11.191400: ✅ Best model: MLP (0.5282)
+2025-05-31 20:44:11.191400: ⏰ Total time: 39.1 minutes
+2025-05-31 20:44:11.191400: 📁 Results saved to: emotion_recognition_system
+2025-05-31 20:44:11.191400: 
+💡 USAGE INSTRUCTIONS:
+2025-05-31 20:44:11.191400: 📱 For Android integration:
+2025-05-31 20:44:11.191400:    1. Use MediaPipe landmarks (same as your current code)
+2025-05-31 20:44:11.191400:    2. Select 27 key landmarks using paper specification
+2025-05-31 20:44:11.191400:    3. Calculate 10 angular features
+2025-05-31 20:44:11.191400:    4. Send features to server with trained model
+2025-05-31 20:44:11.206448: 
+🔧 Model files:
+2025-05-31 20:44:11.206448:    📄 Emotion classifier: emotion_recognition_system\emotion_model/model.pkl
+2025-05-31 20:44:11.206448:    📄 Feature scaler: emotion_recognition_system\emotion_model/scaler.pkl
+2025-05-31 20:44:11.207460:    📄 PCA transformer: emotion_recognition_system\emotion_model/pca.pkl

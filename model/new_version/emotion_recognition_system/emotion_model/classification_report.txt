@@ -1,0 +1,33 @@
+EMOTION RECOGNITION RESULTS - PAPER IMPLEMENTATION
+============================================================
+
+Best Model: MLP
+Accuracy: 0.5282
+
+DETAILED CLASSIFICATION REPORT:
+----------------------------------------
+              precision    recall  f1-score   support
+
+    surprise       0.55      0.67      0.60        88
+        fear       0.00      0.00      0.00        19
+     disgust       0.00      0.00      0.00        25
+   happiness       0.56      0.67      0.61       163
+     sadness       0.21      0.12      0.15        60
+       anger       0.54      0.52      0.53        29
+     neutral       0.54      0.61      0.57       148
+
+    accuracy                           0.53       532
+   macro avg       0.34      0.37      0.35       532
+weighted avg       0.47      0.53      0.49       532
+
+
+ALL MODEL RESULTS:
+----------------------------------------
+MLP     : 0.5282
+QDA     : 0.5226
+NB      : 0.5150
+LR      : 0.5075
+RF      : 0.4981
+SVM     : 0.4605
+KNN     : 0.3797
+DT      : 0.3647

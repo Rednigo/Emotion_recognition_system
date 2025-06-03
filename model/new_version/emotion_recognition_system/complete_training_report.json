@@ -1,0 +1,33 @@
+{
+  "pipeline_info": {
+    "timestamp": "2025-05-31T20:44:11.191400",
+    "srgan_weights": "srgan_complete.h5",
+    "output_directory": "emotion_recognition_system"
+  },
+  "methodology": {
+    "preprocessing": "SRGAN weights -> complete model -> 4x upscaling (48x48 -> 192x192)",
+    "landmark_detection": "MediaPipe Face Mesh (468 landmarks)",
+    "feature_extraction": "27 key landmarks -> 10 angular features",
+    "classification": "8 ML models with paper hyperparameters"
+  },
+  "results": {
+    "best_model": "MLP",
+    "best_accuracy": 0.5281954887218046,
+    "all_results": {
+      "DT": 0.36466165413533835,
+      "KNN": 0.37969924812030076,
+      "SVM": 0.4605263157894737,
+      "NB": 0.5150375939849624,
+      "MLP": 0.5281954887218046,
+      "QDA": 0.5225563909774437,
+      "RF": 0.4981203007518797,
+      "LR": 0.5075187969924813
+    }
+  },
+  "paper_compliance": {
+    "weights_loading": "Custom SRGAN architecture with loaded weights",
+    "preprocessing_method": "SRGAN 4x super-resolution",
+    "feature_extraction": "Exact paper methodology",
+    "classification": "Exact paper hyperparameters"
+  }
+}

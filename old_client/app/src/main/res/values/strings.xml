@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Emotion Recognition</string>
+    <string name="analyze_face">Аналіз обличчя</string>
+    <string name="exit">Вихід</string>
+    <string name="ready_for_analysis">Готовий до аналізу</string>
+    <string name="analysis_active">Аналіз активний</string>
+    <string name="detected_emotion">Виявлена емоція: %1$s</string>
+    <string name="confidence_level">Впевненість: %1$d%%</string>
+    <string name="recommendation">Рекомендація: %1$s</string>
+    <string name="permissions_required">Дозволи на камеру та сповіщення необхідні для роботи додатку</string>
+    <string name="analysis_started">Аналіз емоцій запущено у фоновому режимі</string>
+    <string name="emotion_recognition_system">Рекомендаційна система на основі емоцій</string>
+</resources>

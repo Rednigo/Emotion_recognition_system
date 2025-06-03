@@ -1,0 +1,50 @@
+2025-05-31 19:59:51.845723: 🚀 STARTING COMPLETE EMOTION RECOGNITION PIPELINE
+2025-05-31 19:59:51.846721: ================================================================================
+2025-05-31 19:59:51.847719: 📁 SRGAN weights: srgan_complete.h5
+2025-05-31 19:59:51.847719: 📁 Dataset: ../DATASET
+2025-05-31 19:59:51.848715: 📁 Output: emotion_recognition_system
+2025-05-31 19:59:51.848715: 🎯 Mode: TEST
+2025-05-31 19:59:51.848715: 
+============================================================
+2025-05-31 19:59:51.849723: STEP 1: PREPARING SRGAN MODEL
+2025-05-31 19:59:51.849723: ============================================================
+2025-05-31 19:59:51.849723: ✅ Found existing complete model: emotion_recognition_system\srgan_complete.h5
+2025-05-31 20:02:15.650322: ⚠️  Failed to load existing model: Exception encountered when calling Lambda.call().
+
+[1mWe could not automatically infer the shape of the Lambda's output. Please specify the `output_shape` argument for this Lambda layer.[0m
+
+Arguments received by Lambda.call():
+  • args=('<KerasTensor shape=(None, 48, 48, 256), dtype=float32, sparse=False, ragged=False, name=keras_tensor_220>',)
+  • kwargs={'mask': 'None'}
+2025-05-31 20:02:15.650322: 🔄 Creating new model...
+2025-05-31 20:02:15.651334: 🔧 Loading SRGAN weights: srgan_complete.h5
+2025-05-31 20:02:16.115895: ✅ SRGAN model created using: direct
+2025-05-31 20:02:17.263187: ✅ Model inference test passed (best range: 0-1 range)
+2025-05-31 20:02:17.836226: 💾 Complete model saved to: emotion_recognition_system\srgan_complete.h5
+2025-05-31 20:02:17.836226: 
+============================================================
+2025-05-31 20:02:17.836226: STEP 2: SRGAN PREPROCESSING
+2025-05-31 20:02:17.836226: ============================================================
+2025-05-31 20:02:17.836226: 📁 Preprocessed data exists: emotion_recognition_system\preprocessed_dataset
+2025-05-31 20:02:22.951431: 🗑️  Removed existing preprocessed data
+2025-05-31 20:02:22.951431: 🔄 Starting SRGAN preprocessing...
+2025-05-31 20:02:22.952472:    Input dataset: ../DATASET
+2025-05-31 20:02:22.952472:    Output: emotion_recognition_system\preprocessed_dataset
+2025-05-31 20:02:22.952472:    Mode: TEST
+2025-05-31 20:02:31.792688: ✅ Preprocessing completed in 8.7 seconds
+2025-05-31 20:02:31.792688: 📊 Processed: 70 images
+2025-05-31 20:02:31.792688: ❌ Failed: 0 images
+2025-05-31 20:02:31.792688: 
+============================================================
+2025-05-31 20:02:31.792688: STEP 3: EMOTION RECOGNITION TRAINING
+2025-05-31 20:02:31.792688: ============================================================
+2025-05-31 20:02:31.806838: ✅ Emotion recognition system initialized
+2025-05-31 20:02:31.806838: ✅ Implementation validated - matches paper specifications
+2025-05-31 20:02:31.806838: 📂 Loading preprocessed dataset: emotion_recognition_system\preprocessed_dataset
+2025-05-31 20:02:32.315232: ✅ Dataset loaded in 0.5 seconds
+2025-05-31 20:02:32.315232: 📊 Training samples: 6
+2025-05-31 20:02:32.315232: 📊 Test samples: 8
+2025-05-31 20:02:32.315232: 📊 Features: 10 angular features
+2025-05-31 20:02:32.315232: 🎯 Training models with paper hyperparameters...
+2025-05-31 20:02:32.324843: ❌ Training failed: Number of classes, 6, does not match size of target_names, 7. Try specifying the labels parameter
+2025-05-31 20:02:32.324843: ❌ Pipeline failed: Number of classes, 6, does not match size of target_names, 7. Try specifying the labels parameter
