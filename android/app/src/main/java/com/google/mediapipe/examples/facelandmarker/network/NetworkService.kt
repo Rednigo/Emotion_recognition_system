@@ -59,8 +59,8 @@ interface RecommendationApi {
 
 // Network Service Singleton
 object NetworkService {
-    private const val EMOTION_API_BASE_URL = "http://your-server-ip:8000/"
-    private const val RECOMMENDATION_API_BASE_URL = "http://your-recommendation-service:8080/"
+    private const val EMOTION_API_BASE_URL = "http://192.168.0.76:8000/"
+    private const val RECOMMENDATION_API_BASE_URL = "http://192.168.0.76:8080/"
 
     private val loggingInterceptor = HttpLoggingInterceptor().apply {
         level = HttpLoggingInterceptor.Level.BODY

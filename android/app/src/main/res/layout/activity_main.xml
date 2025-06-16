@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,6 +7,7 @@
     android:background="@android:color/black"
     tools:context=".MainActivity">
 
+    <!-- Fragment container (at the very back) -->
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragment_container"
         android:name="androidx.navigation.fragment.NavHostFragment"
@@ -18,7 +19,20 @@
         app:defaultNavHost="true"
         app:navGraph="@navigation/nav_graph"
         tools:context=".MainActivity" />
-    <!-- Logo/Title -->
+
+    <!-- Black overlay image on top of fragment -->
+    <ImageView
+        android:id="@+id/blackOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@android:color/black"
+        android:scaleType="fitXY"
+        android:alpha="1.0"
+        android:focusable="false" />
+
+    <!-- Your UI elements below here (logo, text, buttons, etc.) -->
+
+    <!-- Logo -->
     <ImageView
         android:id="@+id/appLogo"
         android:layout_width="200dp"
@@ -30,12 +44,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
+    <!-- Title -->
     <TextView
         android:id="@+id/titleText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Face Emotion Recognition"
+        android:text="Розпізнавання емоцій обличчя"
         android:textColor="@android:color/white"
         android:textSize="24sp"
         android:textStyle="bold"
@@ -43,19 +58,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
+    <!-- Subtitle -->
     <TextView
         android:id="@+id/subtitleText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="Analyze emotions in real-time"
+        android:text="Аналіз емоцій у реальному часі"
         android:textColor="@android:color/darker_gray"
         android:textSize="16sp"
         app:layout_constraintTop_toBottomOf="@id/titleText"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- Buttons Container -->
+    <!-- Buttons container -->
     <LinearLayout
         android:id="@+id/buttonsContainer"
         android:layout_width="0dp"
@@ -68,13 +84,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
+        <!-- Buttons... -->
         <!-- Camera Button -->
         <com.google.android.material.button.MaterialButton
             android:id="@+id/cameraButton"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:layout_marginBottom="16dp"
-            android:text="Start Camera"
+            android:text="Запустити камеру"
             android:textSize="18sp"
             android:backgroundTint="@color/mp_color_primary"
             app:cornerRadius="8dp"
@@ -88,7 +105,7 @@
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:layout_marginBottom="16dp"
-            android:text="Open Feed"
+            android:text="Відкрити стрічку"
             android:textSize="18sp"
             android:backgroundTint="@color/mp_color_secondary"
             app:cornerRadius="8dp"
@@ -101,7 +118,7 @@
             android:id="@+id/exitButton"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:text="Exit"
+            android:text="Вихід"
             android:textSize="18sp"
             android:backgroundTint="@android:color/darker_gray"
             app:cornerRadius="8dp"
@@ -117,7 +134,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        android:text="v1.0.0"
+        android:text="в1.0.0"
         android:textColor="@android:color/darker_gray"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
